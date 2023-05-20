@@ -1,0 +1,65 @@
+// @media screen and (max-width: 320px) {
+// }
+// @media screen and (max-width: 375px) {
+// }
+// @media screen and (max-width: 425px) {
+// }
+// @media screen and (max-width: 768px) {
+// }
+@media screen and (max-width: 1024px) {
+  .navNheader {
+    nav {
+      h1.logo {
+        font-size: 3rem;
+      }
+      ul li a {
+        font-size: 1.1rem;
+      }
+      #modeSwicher {
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+    }
+
+    .header {
+      .col-left {
+        padding-top: 5rem;
+        h1 {
+          font-size: 2.8rem;
+          line-height: 3rem;
+        }
+        p {
+          font-size: 0.8rem;
+          margin-bottom: 2rem;
+        }
+        a#cvdBtn {
+          font-size: 1rem;
+          padding: 0.3rem 1.2rem;
+        }
+
+        ul {
+          width: 8rem;
+          margin-top: 7rem;
+          li a i {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .col-right {
+        .img-container {
+          img.pattern {
+            width: 25rem;
+            top: 2rem;
+            right: 2.5rem;
+          }
+          img.img-main {
+            width: 22rem;
+            top: 0.2rem;
+            right: 3rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+//Colors
+$primaryColor: #edf2fc;
+$secoendryColor: #212121;
+$ylwTxt: #ff531b;
+
+//Dark
+$primaryColorD: #000106;
+$secoendryColorD: #fff;
+
+body {
+  font-size: 62.5%;
+  font-family: poppins;
+
+  //Swiching To Dark Mode
+  &.dark-mode {
+    .navNheader {
+      background: $primaryColorD;
+
+      nav ul li a {
+        color: $secoendryColorD;
+      }
+
+      .col-left {
+        h1 {
+          color: $secoendryColorD;
+        }
+        p {
+          color: $secoendryColorD;
+        }
+        a#cvdBtn {
+          background: $secoendryColorD;
+          color: $primaryColorD;
+        }
+        ul li a i {
+          color: $secoendryColorD;
+        }
+      }
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .container {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .row {
+    width: 100%;
+  }
+}
+
+.navNheader {
+  width: 100vw;
+  height: 46.9rem;
+  background: $primaryColor;
+  overflow: hidden;
+
+  nav {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+
+    // img.logo {
+    //   width: 5rem;
+    // }
+
+    h1.logo {
+      font-size: 3.5rem;
+      // color: #1dcdfe;
+      color: #28b873;
+      span {
+        color: red;
+      }
+    }
+
+    ul {
+      flex: 1;
+      text-align: right;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 2rem;
+
+        a {
+          text-decoration: none;
+          color: $secoendryColor;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          line-height: 1.8rem;
+          display: grid;
+          place-items: center;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0.3rem;
+            background: $ylwTxt;
+            border-radius: 0.5rem;
+            transition: 0.2s;
+          }
+
+          &.active {
+            &::after {
+              width: 70%;
+            }
+          }
+
+          &:hover {
+            &::after {
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+
+    #modeSwicher {
+      font-size: 2rem;
+      cursor: pointer;
+
+      &.fa-moon {
+        color: $secoendryColor;
+      }
+      &.fa-sun {
+        color: $primaryColor;
+      }
+    }
+  }
+  .header {
+    width: 100%;
+    height: 90rem;
+    display: flex;
+    align-items: start;
+
+    .col-left {
+      width: 50%;
+      height: 100%;
+      padding-top: 12rem;
+      h1 {
+        color: $secoendryColor;
+        font-size: 4rem;
+        line-height: 3.75rem;
+
+        span {
+          color: $ylwTxt;
+        }
+      }
+      p {
+        color: $secoendryColor;
+        font-size: 0.9rem;
+        margin: 1.2rem 0 3rem 0;
+      }
+      a#cvdBtn {
+        text-decoration: none;
+        background: $secoendryColor;
+        border-radius: 0.3rem;
+        padding: 0.52rem 1.35rem;
+        color: $primaryColor;
+        font-size: 1.5rem;
+        transition: 0.2s;
+        &:hover {
+          background: $ylwTxt;
+        }
+      }
+      ul {
+        width: 12rem;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 11rem;
+        li {
+          list-style: none;
+          display: inline-block;
+          a {
+            text-decoration: none;
+            i {
+              color: $secoendryColor;
+              font-size: 2rem;
+              transition: 0.2s;
+              &:hover {
+                color: $ylwTxt;
+              }
+            }
+          }
+        }
+      }
+    }
+    .col-right {
+      width: 50%;
+      height: 100%;
+
+      .img-container {
+        position: relative;
+        cursor: pointer;
+
+        img.pattern {
+          position: absolute;
+          width: 32rem;
+          top: 3rem;
+          right: 5rem;
+          transition: 0.5s;
+        }
+        img.img-main {
+          position: absolute;
+          width: 28rem;
+          transition: 0.5s;
+          top: 2.1rem;
+          right: 8rem;
+        }
+        &:hover {
+          img.pattern {
+            transform: translateX(40px);
+          }
+          img.img-main {
+            transform: translateX(-40px);
+          }
+        }
+      }
+    }
+  }
+}
